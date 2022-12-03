@@ -266,6 +266,9 @@ h2 {
           border-left: 2px solid rgba($blue1, 0.3);
         }
         &:hover {
+          h3 {
+            color: $red;
+          }
           img {
             transform: scale(1.1);
             // filter: none;
@@ -321,6 +324,11 @@ h2 {
         row: 1/2;
         column: 1/2;
       }
+      background: {
+        image: url('../src/assets/img/about_background.svg');
+        repeat: no-repeat;
+        position: 3rem 5rem;
+      }
       display: flex;
       justify-content: flex-end;
       img {
@@ -359,10 +367,46 @@ h2 {
         }
         svg {
           font: {
-            size: 2rem;
+            size: 1.5rem;
           }
         }
       }
+    }
+  }
+}
+.footer {
+  color: $background;
+  background-color: $red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5rem;
+  padding: {
+    left: 3rem;
+    right: 3rem;
+  }
+  border-radius: 0 0 1rem 1rem;
+  article {
+    &:first-of-type {
+      font: {
+        family: 'Roboto Bold';
+      }
+    }
+    &:nth-of-type(2) {
+        text-transform: uppercase;
+      font: {
+        family: 'Roboto Regular';
+      }
+    }
+    &:nth-of-type(2) {
+        text-transform: uppercase;
+      
+    }
+    &:nth-of-type(3) {
+        font:{
+            variant: small-caps;
+        }
+      
     }
   }
 }
