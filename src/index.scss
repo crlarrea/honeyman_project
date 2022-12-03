@@ -24,6 +24,7 @@ $blue2: #2e5bff;
 $blue3: #1d3557;
 $black: #293241;
 $red: #e63946;
+$yellow:#ffca09;
 
 body {
   background-color: $background;
@@ -307,6 +308,70 @@ h2 {
   }
 }
 
+.testimonials {
+  margin-top: 10rem;
+  padding: {
+    left: 5rem;
+    right: 5rem;
+  }
+  display: grid;
+  grid-template: {
+    rows: auto;
+    columns: 1fr 2fr;
+  }
+  article {
+    &:first-of-type {
+      grid: {
+        row: 1/2;
+        column: 1/2;
+      }
+    }
+    &:nth-of-type(2) {
+      grid: {
+        row: 1/2;
+        column: 2/3;
+      }
+      padding:{
+        left:5rem;
+      }
+      p {
+        &:first-of-type {
+          padding-top: 1rem;
+          font: {
+            size: 1.5rem;
+            family: 'Roboto Bold';
+          }
+          color: $blue1;
+        }
+        &:nth-of-type(2) {
+          font: {
+            size: 1rem;
+            family: 'Roboto Bold';
+          }
+          color: $blue3;
+          text-transform: capitalize;
+        }
+        &:nth-of-type(3) {
+            padding-top: 0.5rem;
+            color: $yellow;
+        }
+        &:nth-of-type(4) {
+            font-size: 1rem;
+            color: $black;
+            padding-top: 1rem;
+            max-width:50%;
+        }
+        &:nth-of-type(5) {
+            font:{size: 1rem;
+            family: 'Roboto Bold';}
+            color: rgba($black, 0.3);
+            padding-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
 .about {
   margin: {
     top: 15rem;
@@ -374,6 +439,20 @@ h2 {
     }
   }
 }
+@keyframes flashingWhite {
+  0% {
+    transform: scale(0.7);
+    color: rgba($red, 0.8);
+    box-shadow: 0 0 5px 3px rgba($red, 0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    color: $background;
+
+    box-shadow: 0 0 5px 7px rgba($background, 0.4);
+  }
+}
 .footer {
   color: $background;
   background-color: $red;
@@ -384,6 +463,8 @@ h2 {
   padding: {
     left: 3rem;
     right: 3rem;
+    top: 2rem;
+    bottom: 2rem;
   }
   border-radius: 0 0 1rem 1rem;
   article {
@@ -393,20 +474,31 @@ h2 {
       }
     }
     &:nth-of-type(2) {
-        text-transform: uppercase;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      svg {
+        border-radius: 50%;
+        color: rgba($red, 0.8);
+        animation: flashingWhite 2s infinite ease-out alternate;
+      }
+      p {
+        padding: {
+          top: 1rem;
+        }
+      }
+      text-transform: uppercase;
       font: {
         family: 'Roboto Regular';
       }
     }
     &:nth-of-type(2) {
-        text-transform: uppercase;
-      
+      text-transform: uppercase;
     }
     &:nth-of-type(3) {
-        font:{
-            variant: small-caps;
-        }
-      
+      font: {
+        variant: small-caps;
+      }
     }
   }
 }

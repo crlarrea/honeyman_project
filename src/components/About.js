@@ -4,7 +4,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 export const About = () => {
   return (
-    <section class='about' id='about'>
+    <section className='about' id='about'>
       <article>
         <img src={require('../assets/img/aidan.png')} alt='aidan honeyman' />
       </article>

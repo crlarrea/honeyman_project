@@ -199,6 +199,44 @@ h2 {
         grid-column: 2/3;
         padding-top: 1rem; }
 
+.testimonials {
+  margin-top: 10rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 2fr; }
+  .testimonials article:first-of-type {
+    grid-row: 1/2;
+    grid-column: 1/2; }
+  .testimonials article:nth-of-type(2) {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-left: 5rem; }
+    .testimonials article:nth-of-type(2) p:first-of-type {
+      padding-top: 1rem;
+      font-size: 1.5rem;
+      font-family: 'Roboto Bold';
+      color: #20cdce; }
+    .testimonials article:nth-of-type(2) p:nth-of-type(2) {
+      font-size: 1rem;
+      font-family: 'Roboto Bold';
+      color: #1d3557;
+      text-transform: capitalize; }
+    .testimonials article:nth-of-type(2) p:nth-of-type(3) {
+      padding-top: 0.5rem;
+      color: #ffca09; }
+    .testimonials article:nth-of-type(2) p:nth-of-type(4) {
+      font-size: 1rem;
+      color: #293241;
+      padding-top: 1rem;
+      max-width: 50%; }
+    .testimonials article:nth-of-type(2) p:nth-of-type(5) {
+      font-size: 1rem;
+      font-family: 'Roboto Bold';
+      color: rgba(41, 50, 65, 0.3);
+      padding-top: 1rem; }
+
 .about {
   margin-top: 15rem;
   margin-left: 5rem;
@@ -241,6 +279,16 @@ h2 {
       .about article:nth-of-type(2) ul svg {
         font-size: 1.5rem; }
 
+@keyframes flashingWhite {
+  0% {
+    transform: scale(0.7);
+    color: rgba(230, 57, 70, 0.8);
+    box-shadow: 0 0 5px 3px rgba(230, 57, 70, 0.4); }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    color: #f3f6fd;
+    box-shadow: 0 0 5px 7px rgba(243, 246, 253, 0.4); } }
 .footer {
   color: #f3f6fd;
   background-color: #e63946;
@@ -250,12 +298,23 @@ h2 {
   min-height: 5rem;
   padding-left: 3rem;
   padding-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-radius: 0 0 1rem 1rem; }
   .footer article:first-of-type {
     font-family: 'Roboto Bold'; }
   .footer article:nth-of-type(2) {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     text-transform: uppercase;
     font-family: 'Roboto Regular'; }
+    .footer article:nth-of-type(2) svg {
+      border-radius: 50%;
+      color: rgba(230, 57, 70, 0.8);
+      animation: flashingWhite 2s infinite ease-out alternate; }
+    .footer article:nth-of-type(2) p {
+      padding-top: 1rem; }
   .footer article:nth-of-type(2) {
     text-transform: uppercase; }
   .footer article:nth-of-type(3) {

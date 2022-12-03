@@ -5,7 +5,7 @@ import marketing from '../assets/img/marketing.svg'
 
 export const Services = () => {
   return (
-    <section class='services' id='services'>
+    <section className='services' id='services'>
       <article>
         <h2>services</h2>
         <p>
