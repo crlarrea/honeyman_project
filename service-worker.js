@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/honeyman_project/precache-manifest.ad8a3aba1bedd66012fcd5987dae95d1.js"
+  "/honeyman_project/precache-manifest.191554fbeecf97632cbccc1c5335cf92.js"
 );
 
 workbox.clientsClaim();
