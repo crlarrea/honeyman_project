@@ -21,13 +21,13 @@ export const About = () => {
             <a
               href='https://www.linkedin.com/in/aidan-honeyman-45b430158/'
               target='_blank'
-              rel='noreferrer'
+              rel='noopener noreferrer'
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>
           <li>
-            <a href='mailto:info@honeyman.com' target='_blank' rel='noreferrer'>
+            <a href='mailto:info@honeyman.com' target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon icon={faPaperPlane} />
             </a>
           </li>

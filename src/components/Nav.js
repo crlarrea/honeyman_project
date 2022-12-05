@@ -21,11 +21,11 @@ export const Nav = () => {
             services
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href='#blog' alt='posts'>
             blog
           </a>
-        </li>
+        </li> */}
         <li>
           <a href='#about' alt='about'>
             about me

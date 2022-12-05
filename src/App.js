@@ -5,7 +5,6 @@ import { Nav } from './components/Nav';
 import { Services } from './components/Services';
 import { Testimonials } from './components/Testimonials';
 import React from 'react';
-import { Blog } from './components/Blog';
 
 
 function App() {
@@ -53,7 +52,6 @@ function App() {
       </header>
       <main>
         <Services/>
-        <Blog/>
         <Testimonials feedback={feedback}/>
         <About/>
         <Footer/>

@@ -9,7 +9,8 @@ export const Hero = () => {
       <article>
         <span>coucou! i'm aidan</span>
         <h1>
-          french to english <span>legal translator</span>
+          french to english<br/>
+          <span>legal translator</span>
         </h1>
         <h2>overcoming language barriers</h2>
         <p>Accurate and clear translation of texts from French to English.</p>
@@ -18,7 +19,7 @@ export const Hero = () => {
             <a
               href='https://www.proz.com/translator/2802161'
               target='_blank'
-              rel='noreferrer'
+              rel='noopener noreferrer'
             >
               <svg
                 height='37'
@@ -46,13 +47,13 @@ export const Hero = () => {
             <a
               href='https://www.linkedin.com/in/aidan-honeyman-45b430158/'
               target='_blank'
-              rel='noreferrer'
+              rel='noopener noreferrer'
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>
           <li>
-            <a href='mailto:info@honeyman.com' target='_blank' rel='noreferrer'>
+            <a href='mailto:info@honeyman.com' target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon icon={faPaperPlane} />
             </a>
           </li>

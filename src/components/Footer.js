@@ -12,7 +12,7 @@ export const Footer = () => {
         <FontAwesomeIcon icon={faCircle} />
         <p>open to work</p>
       </article>
-      <article>developed by long lane digital</article>
+      <article>&copy; {new Date().getFullYear()}</article>
     </footer>
   );
 };

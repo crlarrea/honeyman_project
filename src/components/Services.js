@@ -1,7 +1,30 @@
-import React from 'react';
-import contract from '../assets/img/contract.svg'
-import business from '../assets/img/business.svg'
-import marketing from '../assets/img/marketing.svg'
+import React, { useState } from 'react';
+import contract from '../assets/img/contract.svg';
+import business from '../assets/img/business.svg';
+import marketing from '../assets/img/marketing.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight, faCaretLeft } from '@fortawesome/free-solid-svg-icons';
+import { InView } from 'react-intersection-observer';
+const services = [
+  {
+    img: contract,
+    title: 'legal',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    img: marketing,
+    title: 'marketing',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    img: business,
+    title: 'business',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+];
 
 export const Services = () => {
   return (
@@ -14,39 +37,15 @@ export const Services = () => {
         </p>
       </article>
       <article>
-        <div>
-          <img
-            src={contract}
-            alt='contract'
-          />
-          <h3>legal</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <div>
-          <img
-            src={marketing}
-            alt='marketing'
-          />
-          <h3>marketing</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <div>
-          <img
-            src={business}
-            alt='business'
-          />
-          <h3>business</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
+        {services.map((entry, index, arr) => {
+          return (
+            <div key={index} data-position={index}>
+              <img src={entry.img} alt={entry.title} />
+              <h3>{entry.title}</h3>
+              <p>{entry.description}</p>
+            </div>
+          );
+        })}
       </article>
     </section>
   );

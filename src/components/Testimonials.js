@@ -23,10 +23,10 @@ export const Testimonials = ({ feedback }) => {
               <p>{entry.job}</p>
               <p>
                 {[...Array(entry.rating)].map((el, index) => {
-                  return <FontAwesomeIcon icon={faStar} />;
+                  return <FontAwesomeIcon icon={faStar} key={`full_star_${index}`}/>;
                 })}
                 {[...Array(5 - entry.rating)].map((el, index) => {
-                  return <FontAwesomeIcon icon={faEmptyStar} />;
+                  return <FontAwesomeIcon icon={faEmptyStar} key={`empty_star_${index}`}/>;
                 })}
               </p>
               <p>{entry.feedback_en}</p>
